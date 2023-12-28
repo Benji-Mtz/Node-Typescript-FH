@@ -7,7 +7,7 @@ const buildMakePerson = ({ getId, getAge }) => {
         return {
             id: getId(),
             name: name,
-            birthdate, birthdate,
+            birthdate: birthdate,
             age: getAge(birthdate),
         }
     }
