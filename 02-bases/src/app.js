@@ -28,4 +28,10 @@ const john = makePerson(objeto);
 console.log(john);
 */
 
-getPokemonById(4);
+// const info = getPokemonById(4);
+// console.log(info); // Promise { <pending> }
+
+getPokemonById(4)
+    .then((pokemon) => console.log({ pokemon }))
+    .catch((err) => console.log('Porfavor intente de nuevo'))
+    .finally(() => console.log('Finalmente'))
