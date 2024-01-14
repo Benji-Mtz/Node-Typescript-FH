@@ -10,6 +10,7 @@
 // require('./js-foundation/05-factory');
 // const { buildMakePerson } = require("./js-foundation/05-factory");
 const getPokemonById = require("./js-foundation/06-promesas");
+const { buildLogger } = require("./plugins");
 
 
 /*
@@ -31,7 +32,13 @@ console.log(john);
 // const info = getPokemonById(4);
 // console.log(info); // Promise { <pending> }
 
-getPokemonById(4)
-    .then((pokemon) => console.log({ pokemon }))
-    .catch((err) => console.log('Porfavor intente de nuevo'))
-    .finally(() => console.log('Finalmente'))
+// getPokemonById(4)
+//     .then((pokemon) => console.log({ pokemon }))
+//     .catch((err) => console.log('Porfavor intente de nuevo'))
+//     .finally(() => console.log('Finalmente'))
+
+
+const logger = buildLogger('app.js')
+
+logger.log('Hola mundo!')
+logger.error('Algo salio mal :(')
